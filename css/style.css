@@ -106,6 +106,9 @@ nav ul li a:hover{
 .social{
     margin-top: 3.5rem;
 }
+.social a{
+    text-decoration: none;
+}
 .social img{
     margin-right: 2rem;
     width: 2.5rem;
@@ -190,4 +193,319 @@ footer .content-footer p{
 footer .content-footer .end{
     color: var(--primarycolor);
     margin-top: 1rem;
+}
+/*-----------------------
+-----------menu---------
+-----------------------*/
+#menu{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+#menu span{
+    display: block;
+    width: 32px;
+    height: 4px;
+    background-color: var(--lightcolor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+}
+#menu.is-active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
+}
+#menu.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+}
+#menu.is-active span:nth-child(3){
+    transform: translate(-3px, 2px) rotate(-45deg);
+}
+#menu.is-active span{
+    background-color: var(--primarycolor);
+}
+/*-----------------------
+--------MEDIA QUERIES-----
+-----------------------*/
+@media screen and (max-width: 575px) {
+    :root{
+        --padding: 1.5rem;
+    }
+    html {
+        font-size: 13px;
+    }
+    .home .container-images img{
+        display: none;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgcolor1);
+        border-bottom: 1px solid var(--bgcolor2);
+        z-index: 100;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bgcolor2);
+    }
+    nav ul.is-active{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin: 50px;
+    }
+    .home .container-text{
+        bottom: 0;
+    }
+    .social{
+        margin-top: 70px;
+    }
+    h3{
+        margin-top: 70px;
+    }
+    #menu{
+        display: block;
+    }
+    .about .container-images{
+        display: none;
+    }
+    .about .container-text{
+        width: 100%;
+    }
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    footer .content-footer p{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    :root{
+        --padding: 1.5rem;
+    }
+    html {
+        font-size: 13px;
+    }
+    .home .container-images img{
+        display: none;
+    }
+    .content {
+        padding-top: 82px;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgcolor1);
+        border-bottom: 1px solid var(--bgcolor2);
+        z-index: 100;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bgcolor2);
+    }
+    nav ul.is-active{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin: 50px;
+    }
+    .home .container-text{
+        bottom: 0;
+    }
+    .social{
+        margin-top: 30px;
+    }
+    h3{
+        margin-top: 30px;
+    }
+    #menu{
+        display: block;
+    }
+    .about .container-images{
+        display: none;
+    }
+    .about .container-text{
+        width: 100%;
+    }
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    footer .content-footer p{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    :root{
+        --padding: 1.5rem;
+    }
+    html {
+        font-size: 13px;
+    }
+    .home .container-images img{
+        display: none;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgcolor1);
+        border-bottom: 1px solid var(--bgcolor2);
+        z-index: 100;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bgcolor2);
+    }
+    nav ul.is-active{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin: 50px;
+    }
+    .home .container-text{
+        bottom: 0;
+    }
+    .social{
+        margin-top: 70px;
+    }
+    h3{
+        margin-top: 70px;
+    }
+    #menu{
+        display: block;
+    }
+    .about .container-images{
+        display: none;
+    }
+    .about .container-text{
+        width: 100%;
+    }
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    footer .content-footer p{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1279px) {
+    :root{
+        --padding: 1.5rem;
+    }
+    html {
+        font-size: 13px;
+    }
+    .home .container-images img{
+        height: auto;
+        width: 100%;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgcolor1);
+        border-bottom: 1px solid var(--bgcolor2);
+        z-index: 100;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color: var(--bgcolor2);
+    }
+    nav ul.is-active{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin: 50px;
+    }
+    .home .container-text{
+        bottom: 0;
+    }
+    .social{
+        margin-top: 70px;
+    }
+    h3{
+        margin-top: 70px;
+    }
+    #menu{
+        display: block;
+    }
+    
+    }
+    .about .container-text{
+        width: 60%;
+    }
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    footer .content-footer p{
+        width: 100%;
+    }
 }
